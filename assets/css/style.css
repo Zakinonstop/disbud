@@ -1,0 +1,43 @@
+body {
+    font-family: Assistant;
+    color: #5D5D5D;
+}
+
+.font-judul {
+    font-family: ZCOOL XiaoWei;
+    font-style: normal;
+    color: #007367;
+}
+
+.btn-customm {
+    background-color: #DD8505; 
+    color: white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    /* margin-left: 10px; */
+    margin-bottom: -10px;
+    
+}
+
+.custom-card {
+    /* padding: 1.5em .5em .5em; */
+    border-radius: 20em;
+    /* border-color: white; */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+input.transparent-input{
+    background-color:rgba(0,0,0,0) !important;
+    border:none !important;
+}
+
+.btn-temukan {
+    background-color: #DD8505; 
+    color: white;
+    /* padding-top: 0px; */
+    /* padding-bottom: 0px; */
+    /* margin-left: 10px; */
+    /* margin-bottom: -10px; */
+    
+}
