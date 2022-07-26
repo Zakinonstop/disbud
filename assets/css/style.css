@@ -31,6 +31,21 @@ body {
     line-height: 40px;
 }
 
+.judul-2 {
+    font-family: ZCOOL XiaoWei;
+    font-style: normal;
+    color: #007367;
+    line-height: 40px;
+    font-size: 44px;
+}
+
+.sub-judul {
+    font-style: normal;
+    color: #007367;
+    line-height: 40px;
+    font-size: 30px;
+}
+
 .btn-customm {
     background-color: #DD8505; 
     color: white;
@@ -49,6 +64,7 @@ body {
    
 }
 
+
 input.transparent-input{
     background-color:rgba(0,0,0,0) !important;
     border:none !important;
@@ -64,13 +80,13 @@ input.transparent-input{
     
 }
 
-.footer-atas {
+/* .footer-atas {
     height: 240px;
-}
+} */
 
-.footer-bawah {
+/* .footer-bawah {
     height: 60px;
-}
+} */
 
 .custom-border-1 {
     border-top: 3px;
@@ -81,4 +97,59 @@ input.transparent-input{
 
 #ajukan .cover {
     height: 1000px;
+}
+
+#ajukan .custom-card-ajukan {
+    height: 1000px;
+}
+
+#map {
+     height: 680px; 
+     margin-left: 20px;
+     margin-right: 20px;
+    }
+
+.carousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;     
+}
+
+.carousel .carousel-indicators .active {
+    width: 20px;
+    height: 20px;
+    /* margin-bottom: 20px; */
+    border-radius: 100%;     
+}
+
+.malioboro:hover {
+    background-color: #DD8505 !important;
+    transform: scale(2px);
+    color: white;
+   
+}
+
+/* 
+.malioboro .card-title:hover {
+    color: white;
+    transform: scale(2px);
+} */
+
+.ganti_bg{
+    background-color: #DD8505 !important;
+    color: white;
+}
+
+.ganti_bg .card-title{
+    color: white;
+}
+/* 
+.malioboro :focus {
+    color: white;
+} */
+
+
+/* halaman login */
+.bg-login {
+    background-size: cover;
 }
