@@ -49,10 +49,10 @@
               <input type="password" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="d-flex flex-row-reverse bd-highlight">
-              <a href="#">Lupa password?</a>
+              <a href="#" style="font-size: 20px;">Lupa password?</a>
             </div>
             <div class="d-grid mt-4">
-              <button type="submit" class="btn btn-danger btn-block rounded-pill">Masuk</button>
+              <button type="submit" class="btn btn-danger btn-block rounded-pill" style="font-size: 24px;">Masuk</button>
 
             </div>
           </form>
