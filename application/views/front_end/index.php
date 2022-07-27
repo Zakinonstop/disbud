@@ -497,7 +497,7 @@
     </section>
 
     <section id="ajukan">
-      <div class="container cover bg-white d-grid gap-2 d-md-flex justify-content-md-center bg-image" style="padding: 20px; background-image:url( <?= base_url('assets/img/bercak.png')?> ); background-size: cover; height: 500px;">
+      <div class="container cover img-fluid bg-white d-grid gap-2 d-md-flex justify-content-md-center bg-image" style="padding: 20px; background-image:url( <?= base_url('assets/img/bercak.png')?> ); background-size: cover; height: 500px;">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="col-lg-8" style="width: 900px; background-image:url( <?= base_url('assets/img/bg-cta.png')?> ); background-size: cover; ">
             <h2 class="font-judul text-center" style="font-size: 34px; margin-top: 50px;">Desain bangunan Anda sudah sesuai dan <br> siap mengajukan permohonan izin?</h2>
@@ -522,11 +522,12 @@
         <div class="col-12 col-md-4 col-lg-2 align-self-center justify-content-end">
         <img src="<?= base_url('assets/img/logo_diy.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8; margin-left:27px; margin-bottom: 10px;" width="120px"></a>
         </div>
-        <div class="col-12 col-md-8 col-lg-6 align-items-center justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 align-items-center justify-content-center mt-3">
           <h4 class="font-judul" style="color: white; font-size: 22px; line-height: 24px;">DINAS KEBUDAYAAN<br> (KUNDHA KABUDAYAN) <br>DAERAH ISTIMEWA YOGYAKARTA</h4>
           <H5 style="color: white; line-height: 10px;">Jalan Cendana II Yogyakarta 55516</H5>
           <p style="color: white; font-size: 20px;">Telp. (0274) 562628 - Fax. (0274) 564945</p>
         </div>
+
         <div class="col-12 col-md-12 col-lg-4">
           <div class="row g-0">
             <div class="col-2 col-md-2 col-lg-2 offset-1">

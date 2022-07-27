@@ -14,7 +14,7 @@ body {
     transition: transform 0.2s ease;
     border-radius: 10px;
     /* box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18); */
-    box-shadow: 0 3px 30px rgb(0 0 0 / 0.1);
+    /* box-shadow: 0 3px 30px rgb(0 0 0 / 2); */
     /* height: 510px; */
     /* border-top: 8px solid #935801;
     border-bottom: 8px solid #935801;
@@ -120,9 +120,10 @@ input.transparent-input{
     
 }
 
-/* .footer-atas {
-    height: 240px;
-} */
+.footer-atas {
+    padding-top: 240px;
+    margin-top: 200px;
+}
 
 /* .footer-bawah {
     height: 60px;
