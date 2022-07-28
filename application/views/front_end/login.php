@@ -70,49 +70,8 @@
   
 
   <main id="main">
-   
-
+  
   </main>
-
-  <section class="footer">
-    <div class="container">
-      <div class="row footer-atas py-2 px-2 align-items-center justify-content-center" style="background-color: #DD8505;">
-        <div class="col-12 col-md-4 col-lg-2 align-self-center justify-content-end">
-        <img src="<?= base_url('assets/img/logo_diy.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8; margin-left:27px; margin-bottom: 10px;" width="120px"></a>
-        </div>
-        <div class="col-12 col-md-8 col-lg-6 align-items-center">
-          <h4 class="font-judul" style="color: white; font-size: 22px; line-height: 27px;">DINAS KEBUDAYAAN<br> (KUNDHA KABUDAYAN) <br>DAERAH ISTIMEWA YOGYAKARTA</h4>
-          <H5 style="color: white;">Jalan Cendana II Yogyakarta 55516</H5>
-          <p style="color: white; font-size: 20px;">Telp. (0274) 562628 - Fax. (0274) 564945</p>
-        </div>
-        <div class="col-12 col-md-12 col-lg-4">
-          <div class="row g-0">
-            <div class="col-2 col-md-2 col-lg-2 offset-1">
-              <img src="<?= base_url('assets/img/twitter.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="64px"></a>
-            </div>
-            <div class="col-2 col-md-2 col-lg-2">
-            <img src="<?= base_url('assets/img/instagram.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="64px"></a>
-            </div>
-            <div class="col-2 col-md-2 col-lg-2">
-            <img src="<?= base_url('assets/img/youtube.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="64px"></a>
-            </div>
-            <div class="col-2 col-md-2 col-lg-2">
-            <img src="<?= base_url('assets/img/facebook.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" height="64px"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" style="background-color: #935801;">
-      <div class="row footer-bawah py-2 px-2 align-items-center justify-content-center g-0" style="background-color: #935801;">
-        <div class="col-lg-10 align-items-center">
-        <h4 class="text-center" style="color: white; font-size: 18px;">Copyright @2022. Dinas Kebudayaan (Kundha Kabudayan) Daerah Istimewa Yogyakarta</h4>
-        </div>
-        
-      </div>
-    </div>
-  </section>
 </div>
     <script type="text/javascript">
       $( document ).ready(function() {

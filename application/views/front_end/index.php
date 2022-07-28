@@ -11,16 +11,69 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css">
+   
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
    crossorigin=""></script>
   </head>
-  <body style="background-color: #F8F9FA;">
+  <style>
+    .card-zoom-atas .card-body {
+    flex: 1 1 auto;
+    padding: 0px;
+    color: var(--bs-card-color);  
+  }
+
+  .dimana-custom {
+    width: auto; 
+    height:34px !important; 
+    margin-left:28px;
+    margin-right:14px;
+    margin-top: 6px;
+  }
+
+  .img-anan {
+    float: left;
+    margin-top: 42px;
+    margin-left: 26px;
+    width: 147px;
+  }
+
+  .img-bulat {
+    float: left;
+    margin-top: -42px;
+    margin-left: -60px;
+    width: 104px;
+  }
+
+  .img-bulat2 {
+    float: right;
+    margin-bottom: -48px;
+    margin-right: -60px;
+    width: 80px;
+  }
+
+  .card-ajukan {
+    transition: transform 0.2s ease;
+    background-color: #FEFCF7;
+    border-color: none;
+    /* box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18); */
+    box-shadow: 0 3px 30px rgb(0 0 0 / 0.1);
+    /* height: 200px; */
+    /* width: 300px; */
+    border-left: 8px solid #F3CC80;
+    border-right: 8px solid #F3CC80;
+    border-radius: 24px;
+    
+  }
+
+  .card-ajukan:hover {
+      transform: scale(1.05);
+  }
+  </style>
+  <body>
 
   <section id="hero">
       <div class="container bg-white bg-image hero rata" style="background-image:url( <?= base_url('assets/img/bg_hero.png')?> );">
@@ -46,7 +99,7 @@
         <li class="nav-item"><a href="#" class="nav-link" style="color: #5D5D5D;">Regulasi</a></li>
         <li class="nav-item"><a href="#" class="nav-link" style="color: #5D5D5D;">Pengajuan</a></li>
         <li class="nav-item">
-        <a type="button" href="<?= base_url('login')?>" class="btn btn-customm btn-navbar-right rounded-pill " style="font-family: 'Assistant';font-size: 24px;">Masuk</a>
+        <a type="button" href="<?= base_url('login')?>" class="btn btn-customm btn-navbar-right rounded-pill " style="font-size: 24px;">Masuk</a>
         <!-- <form class="form-inline my-2 my-lg-0 d-none d-md-block" method="post" action="https://www.simelati.id/masuk">
 						<button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-3 bg-blue">Masuk | Daftar</button>
 					</form> -->
@@ -59,13 +112,13 @@
           <!-- <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> -->
         </div>
         <div class="col-md-10 col-lg-10">
-          <h1 class="display-5 lh-1 mb-3 font-judul" style="font-size: 64px;">Telusuri Arsitektur <br> Kawasan Cagar Budaya</h1>
-          <p class="lead" style="font-size: 36px; line-height: 40px">Beragam gaya arsitektur dan bentuk komponen <br> bangunan dapat ditemukan di sini!</p>
+          <h1 class="display-5 lh-1 mb-3 font-judul" style="font-size: 50px;">Telusuri Arsitektur <br> Kawasan Cagar Budaya</h1>
+          <p class="lead" style="font-size: 30px; line-height: 40px">Beragam gaya arsitektur dan bentuk komponen <br> bangunan dapat ditemukan di sini!</p>
 
           <div class="row mt-4 g-2">
             
             <div class="col-6 col-md-4 col-lg-2">
-              <a type="button" href="#" class="btn card card-zoom-atas malioboro malioboro1 ganti_bg pt-4 shadow-hero" style="font-family: 'Assistant';font-size: 36px; padding-top: 4px;">
+              <a type="button" href="#" class="btn card card-zoom-atas malioboro malioboro1 ganti_bg pt-3 pb-2 shadow-hero" style="font-family: 'Assistant';font-size: 36px; padding-top: 4px;">
                 
                       <img src="<?= base_url('assets/img/logo_kraton.png')?>" class="card-img-top" alt="...">
                       <div class="card-body">
@@ -76,7 +129,7 @@
             </div>
 
             <div class="col-6 col-md-4 col-lg-2">
-              <a type="button" href="#" class="btn card card-zoom-atas malioboro malioboro2 pt-4 shadow-hero" style="font-family: 'Assistant';font-size: 36px; padding-top: 4px;">
+              <a type="button" href="#" class="btn card card-zoom-atas malioboro malioboro2 pt-3 pb-2 shadow-hero" style="font-family: 'Assistant';font-size: 36px; padding-top: 4px;">
                 
                       <img src="<?= base_url('assets/img/logo_kraton.png')?>" class="card-img-top" alt="...">
                       <div class="card-body">
@@ -87,7 +140,7 @@
             </div>
 
             <div class="col-6 col-md-4 col-lg-2">
-              <a type="button" href="#" class="btn card card-zoom-atas malioboro malioboro3 pt-4 shadow-hero" style="font-family: 'Assistant';font-size: 36px; padding-top: 4px;">
+              <a type="button" href="#" class="btn card card-zoom-atas malioboro malioboro3 pt-3 pb-2 shadow-hero" style="font-family: 'Assistant';font-size: 36px; padding-top: 4px;">
                       <img src="<?= base_url('assets/img/logo_kraton.png')?>" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h4 class="card-title text-center font-judul">Malioboro</h4> <!-- this text get from database -->
@@ -96,7 +149,7 @@
             </div>
             
             <div class="col-6 col-md-4 col-lg-2">
-              <a type="button" href="#" class="btn card card-zoom-atas malioboro malioboro4 pt-4 shadow-hero" style="font-family: 'Assistant';font-size: 36px; padding-top: 4px;">
+              <a type="button" href="#" class="btn card card-zoom-atas malioboro malioboro4 pt-3 pb-2 shadow-hero" style="font-family: 'Assistant';font-size: 36px; padding-top: 4px;">
                       <img src="<?= base_url('assets/img/logo_kraton.png')?>" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h4 class="card-title text-center font-judul">Kotabaru</h4> <!-- this text get from database -->
@@ -105,7 +158,7 @@
             </div>
 
             <div class="col-6 col-md-4 col-lg-2">
-              <a type="button" href="#" class="btn card card-zoom-atas malioboro malioboro5 pt-4 shadow-hero" style="font-family: 'Assistant';font-size: 36px; padding-top: 4px;">
+              <a type="button" href="#" class="btn card card-zoom-atas malioboro malioboro5 pt-3 pb-2 shadow-hero" style="font-family: 'Assistant';font-size: 36px; padding-top: 4px;">
                       <img src="<?= base_url('assets/img/logo_kraton.png')?>" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h4 class="card-title text-center font-judul">Kotagede</h4> <!-- this text get from database -->
@@ -115,9 +168,8 @@
           </div>
           
           <br>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4" style="margin-bottom: 200px;">
-            <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 rounded-pill btn-danger">Lihat Panduan -></button> -->
-            <a type="button" href="#" class="btn btn-block btn-danger rounded-pill " style="font-family: 'Assistant';font-size: 30px;">&nbsp; Lihat Panduan &#10230; &nbsp;</a>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4" style="margin-bottom: 200px;"><!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 rounded-pill btn-danger">Lihat Panduan -></button> -->
+            <a type="button" href="#" class="btn btn-block btn-danger rounded-pill " style="font-size: 24px;">&nbsp; Lihat Panduan &#10230; &nbsp;</a>
           </div>
         </div>
       </div>
@@ -133,26 +185,19 @@
     <section id="kawasan">
       <div class="container rata" style="background-color: #FDFDFD;">
       <div class="container rata px-3 pt-5 text-center ">
-        <h1 class="display-4 judul-2">Temukan kawasan bangunan Anda</h1> <br>
+        <h1 class="display-4 judul-2">Temukan kawasan bangunan Anda</h1><br>
         <div class="container rata">
-          <div class="col-lg-12 my-4">
-
-                      <div class="dataTables_length float-right" id="example1_length">
-                          <!-- <a href="https://inayatullahspp.my.id/dashboard_tamu/add" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tambah Data">Tambah Data</a> -->
-                      </div>
-
-                      <div class="card custom-card shadow-custom">
+          <div class="col-lg-12 mb-4">
+                      <div class="custom-card shadow-custom">
                         <div class="card-body">
-                          <div class="row g-0">
-                            <div class="col-2 col-md-2 col-lg-1 py-1">
-                              <img src="<?= base_url('/assets/img/logo_lokasi.png')?>" alt="" width="27.67px">
-                            </div>
-                            <div class="col-10 col-md-10 col-lg-11 ">
-                              <form action="" method="post">
-                                <div class="input-group input-group-md">
-                                    <input type="text" class="form-control transparent-input" style="font-family: 'Assistant';font-size: 24px; padding-left: 0px;" placeholder="Dimana lokasi Anda akan bangun?" name="keyword">
+                          <div class="row g-0 align-items-center">
+                              <div class="col-12 col-md-12 col-lg-12">
+                                <form action="" method="post">
+                                  <div class="input-group input-group-md">
+                                  <img src="<?= base_url('/assets/img/logo_lokasi.png')?>" alt="" class="dimana-custom">
+                                    <input type="text" class="form-control transparent-input" style="font-family: 'Assistant';font-size: 20px; padding-left: 0px;" placeholder="Dimana lokasi Anda akan bangun?" name="keyword">
                                     <span class="input-group-append">
-                                        <button type="submit" class="btn rounded-pill btn-temukan" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cari" style="font-family: 'Assistant';font-size: 24px;"><img src="<?= base_url('/assets/img/logo_maps.png')?>" alt="" width="21.63px"> Temukan</button>
+                                        <button type="submit" class="btn rounded-pill btn-temukan" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cari" style="font-size: 24px;"><img src="<?= base_url('/assets/img/logo_maps.png')?>" alt="" width="24px">Temukan</button>
                                     </span>
                                 </div>
                                </form>
@@ -188,7 +233,7 @@
       <div class="container rata px-4 facts pt-lg-0 bg-white">
         <br><br>
           <div class="container pt-lg-0 py-10">
-            <div class="card shadow-custom my-4" style="border-radius: 20px; background-color: #FDF6E0; border-color: #FDF6E0;">
+            <div class="card my-4" style="border-radius: 20px; background-color: #FDF6E0; border-color: #FDF6E0;">
               <div class="row">
                                 <div class="col-12 col-md-6 col-lg-4 wow zoomIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: zoomIn;">
                                     <div class="d-flex align-items-center justify-content-center p-4" style="height: 150px; ">
@@ -236,39 +281,39 @@
       </div>
     </section>
     <section id="langkah">
-      <div class="container rata bg-white">
-        <div class="row pt-4 text-center justify-content-center">
+      <div class="container py-4 rata bg-white">
+        <div class="row text-center justify-content-center">
             <p class="border-top-custom col-lg-2 justify-content-center rounded-pill"></p>
-            <h1 class="display-4 judul-2 "><b>Ikuti 4 Langkah Mudah</b></h1><br><br>
+            <h1 class="display-4 judul-2"><b>Ikuti 4 Langkah Mudah</b></h1><br><br>
             <p class="sub-judul">	Prosedur pengurusan izin pendirian atau adaptasi <br> bangunan di kawasan cagar budaya</p><br>
+        </div>
 
-
-        <div class="row d-flex g-4 mt-5" >
+        <div class="row d-flex mt-5" >
           <div class="col-12 col-md-6 col-lg-3" >
-            
-            <div class="card card-zoom " style=" background-color:#FDF6E0;" >
-              <div class="row mt-4 mb-2 ">
-                <div class="col-lg-4">
-                </div>
-                <div class="col-lg-4">
-                  <img src="<?= base_url('/assets/img/pendaftaran2.png')?>" alt="" width="70px">
-                </div>
-                <div class="col-lg-4">
-                </div>
-              </div>
               
-              <div class="card-title font-judul" style="font-size: 35px;">
-                Pendaftaran <br> Akun
-              </div>
-              <div class="card-body">
-              <p class="card-text" style="font-size: 24px;">Calon pemohon melakukan pendaftaran akun terlebih dahulu dengan melengkapi data diri sesuai formulir yang disediakan</p>
+              <div class="card card-zoom text-center " style=" background-color:#FDF6E0;" >
+                <div class="row mt-4 mb-2">
+                  <div class="col-lg-4">
+                  </div>
+                  <div class="col-lg-4">
+                    <img src="<?= base_url('/assets/img/pendaftaran2.png')?>" alt="" width="70px">
+                  </div>
+                  <div class="col-lg-4">
+                  </div>
+                </div>
+                
+                <div class="card-title font-judul" style="font-size: 28px;">
+                  Pendaftaran <br> Akun
+                </div>
+                <div class="card-body">
+                <p class="card-text">Calon pemohon melakukan pendaftaran akun terlebih dahulu dengan melengkapi data diri sesuai formulir yang disediakan</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3">
             
-            <div class="card card-zoom" style=" background-color:#FDF6E0;">
+            <div class="card card-zoom text-center " style=" background-color:#FDF6E0;">
               <div class="row mt-4 mb-2 ">
                 <div class="col-lg-4">
                 </div>
@@ -279,7 +324,7 @@
                 </div>
               </div>
               
-              <div class="card-title font-judul" style="font-size: 35px;">
+              <div class="card-title font-judul" style="font-size: 28px;">
                 Ajukan <br> Permohonan
               </div>
               <div class="card-body">
@@ -290,7 +335,7 @@
 
           <div class="col-12 col-md-6 col-lg-3">
             
-            <div class="card card-zoom" style=" background-color:#FDF6E0;">
+            <div class="card card-zoom text-center" style=" background-color:#FDF6E0;">
               <div class="row mt-4 mb-2">
                 <div class="col-lg-4">
                 </div>
@@ -302,7 +347,7 @@
                 </div>
               </div>
               
-              <div class="card-title font-judul" style="font-size: 35px;">
+              <div class="card-title font-judul" style="font-size: 28px;">
                 Lengkapi <br> Dokumen
               </div>
               <div class="card-body">
@@ -311,9 +356,9 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3 ">
             
-            <div class="card card-zoom" style=" background-color:#FDF6E0;">
+            <div class="card card-zoom text-center" style=" background-color:#FDF6E0;">
               <div class="row mt-4 mb-2">
                 <div class="col-lg-4">
                 </div>
@@ -324,7 +369,7 @@
                 </div>
               </div>
               
-              <div class="card-title font-judul" style="font-size: 35px;">
+              <div class="card-title font-judul" style="font-size: 28px;">
                 Hasil <br> Permohonan
               </div>
               <div class="card-body">
@@ -332,15 +377,15 @@
               </div>
             </div>
           </div>
-        
+
         </div>
       
       </div>
-      <br><br>
+      
     </section>
     <section id="regulasi">
-      <div class="container bg-white">
-        <div class="row px-4 pt-5 text-center justify-content-center">
+      <div class="container py-5 bg-white">
+        <div class="row px-4 mt-4  text-center justify-content-center">
             <p class="border-top-custom col-lg-2 justify-content-center rounded-pill"></p>
             <h1 class="display-4 judul-2"><b>Lihat Regulasi</b></h1><br><br>
             <h3 class="display-6 sub-judul">Beberapa dokumen peraturan yang terkait dengan kaidah pelestarian <br> dan pelaksanaan pembangunan di kawasan cagar budaya</h3><br>
@@ -348,7 +393,7 @@
       
 
       <!-- <div class="container text-center mt-5 bg-white" > -->
-      <div class="row py-4 px-4 justify-content-center text-center mt-5" style="background-color: #935802;">
+      <div class="row pt-4 px-4 justify-content-center text-center mt-4" style="background-color: #935802;">
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card" style="width: 18rem; background-color:#FDF6E0;">
               <img src="<?= base_url('/assets/img/bg.png')?>" class="card-img-top" alt="...">
@@ -385,12 +430,12 @@
     </section>
 
     <section id="testimoni" class="testimoni">
-      <div class="container bg-white">
+      <div class="container pt-4 bg-white">
         
-        <div class="row px-4 pt-5 text-center justify-content-center">
+        <div class="row px-4 mt-4 text-center justify-content-center">
             <p class="border-top-custom col-lg-2 justify-content-center rounded-pill"></p>
             <h1 class="display-4 judul-2"><b>Testimoni</b></h1><br><br>
-            <h3 class="display-6 sub-judul">Beragam tanggapan dan umpan balik pemohon yang telah <br> mengajukan permohonan izin menggunakan layanan sistem</h3><br>
+            <p class="sub-judul">Beragam tanggapan dan umpan balik pemohon yang telah <br> mengajukan permohonan izin menggunakan layanan sistem</h3><br>
         </div>
 
         <div class="row align-items-center mt-5">
@@ -406,68 +451,25 @@
 
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <div class="row" style="padding-top: 40px; padding-bottom: 40px;">
-                    <div class="col-lg-2 offset-2">
-                        <img src="<?= base_url('assets/img/foto-profil.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="200px"></a>
+                  <div class="row align-items-center" style="padding-top: 40px; padding-bottom: 40px;">
+                    <div class="col-lg-2 offset-2 px-4 " style="padding-bottom: 30px; background-image:url( <?= base_url('assets/img/bg-foto-profil2.png')?> ); background-size: 100%; background-repeat: no-repeat;">
+                        <img src="<?= base_url('assets/img/foto-profil.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3 img-anan" style="opacity: .8"></a>
                     </div>
-                    <div class="col-lg-6 mb-4">
-                      <h3>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3> <br>
-                      <h3><b>Shintya Agustina</b></h3>
-                    </div>
-                  </div>
-                </div>
-
-               
-                <div class="carousel-item">
-                  <div class="row" style="padding-top: 40px; padding-bottom: 40px;">
-                    <div class="col-lg-2 offset-2">
-                        <img src="<?= base_url('assets/img/foto-profil.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="200px"></a>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                      <h3>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3> <br>
-                      <h3><b>Shintya Agustina</b></h3>
+                    <div class="col-lg-6 my-4 mx-4">
+                      <p>Wah, memudahkan sekali sistem ini. Kini proses pengajuan izin tidak perlu menunggu lama, hanya dalam hitungan hari surat rekomendasi sudah bisa terbit.</p>
+                      <h4 class="font-judul">Shintya Agustina</h4>
                     </div>
                   </div>
                 </div>
-
-               
-               
+              
                 <div class="carousel-item">
-                  <div class="row" style="padding-top: 40px; padding-bottom: 40px;">
-                    <div class="col-lg-2 offset-2">
-                        <img src="<?= base_url('assets/img/foto-profil.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="200px"></a>
+                  <div class="row align-items-center" style="padding-top: 40px; padding-bottom: 40px;">
+                    <div class="col-lg-2 offset-2 px-4 " style="padding-bottom: 30px; background-image:url( <?= base_url('assets/img/bg-foto-profil2.png')?> ); background-size: 100%; background-repeat: no-repeat;">
+                        <img src="<?= base_url('assets/img/foto-profil.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3 img-anan" style="opacity: .8"></a>
                     </div>
-                    <div class="col-lg-6 mb-4">
-                      <h3>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3> <br>
-                      <h3><b>Shintya Agustina</b></h3>
-                    </div>
-                  </div>
-                </div>
-
-               
-               
-                <div class="carousel-item">
-                  <div class="row" style="padding-top: 40px; padding-bottom: 40px;">
-                    <div class="col-lg-2 offset-2">
-                        <img src="<?= base_url('assets/img/foto-profil.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="200px"></a>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                      <h3>4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3> <br>
-                      <h3><b>Shintya Agustina</b></h3>
-                    </div>
-                  </div>
-                </div>
-
-               
-               
-                <div class="carousel-item">
-                  <div class="row" style="padding-top: 40px; padding-bottom: 40px;">
-                    <div class="col-lg-2 offset-2">
-                        <img src="<?= base_url('assets/img/foto-profil.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="200px"></a>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                      <h3>Lima Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3> <br>
-                      <h3><b>Shintya Agustina</b></h3>
+                    <div class="col-lg-6 my-4 mx-4">
+                      <p>Wah, memudahkan sekali sistem ini. Kini proses pengajuan izin tidak perlu menunggu lama, hanya dalam hitungan hari surat rekomendasi sudah bisa terbit.</p>
+                      <h4 class="font-judul">Shintya Agustina</h4>
                     </div>
                   </div>
                 </div>
@@ -475,7 +477,7 @@
                
 
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-testimoni" data-bs-slide="prev">
+              <button class="carousel-control-prev px-4" type="button" data-bs-target="#carousel-testimoni" data-bs-slide="prev">
                 <!-- <span class=" bg-warning rounded-pill panah-testimoni" aria-hidden="true"></span> -->
                 <img src="<?=base_url('assets/img/panah-prev.png')?>" style="width: 50px;height: 50px;">
                 
@@ -496,21 +498,37 @@
       </div>
     </section>
 
+    
     <section id="ajukan">
-      <div class="container cover img-fluid bg-white d-grid gap-2 d-md-flex justify-content-md-center bg-image" style="padding: 20px; background-image:url( <?= base_url('assets/img/bercak.png')?> ); background-size: cover; height: 500px;">
-        <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-lg-8" style="width: 900px; background-image:url( <?= base_url('assets/img/bg-cta.png')?> ); background-size: cover; ">
-            <h2 class="font-judul text-center" style="font-size: 34px; margin-top: 50px;">Desain bangunan Anda sudah sesuai dan <br> siap mengajukan permohonan izin?</h2>
+      <div class="container cover img-fluid bg-white d-grid gap-2 d-md-flex justify-content-md-center bg-image" style="padding: 20px; background-image:url( <?= base_url('assets/img/bercak.png')?> ); background-size: cover; height: 480px;">
+        <div class="d-flex align-items-center justify-content-center">
+        <div class="card card-ajukan col-lg-10 position-relative px-4 py-4">
+          <div class="row">
+            <img src="<?= base_url('assets/img/bulat.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3 img-bulat" </a>
+         
+            <h2 class="font-judul text-center" style="font-size: 32px; margin-top: -40px;">Desain bangunan Anda sudah sesuai dan <br> siap mengajukan permohonan izin?</h2>
             
-            <div class=" d-grid gap-2 d-md-flex justify-content-md-center">
-                <h4 style="font-size: 24px;">Hanya perlu beberapa langkah untuk mengajukan permohonan Anda</h4>
-              </div>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-center my-4">
-                <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 rounded-pill btn-danger">Lihat Panduan -></button> -->
-                <a type="button" href="#" class="btn btn-block btn-danger rounded-pill mt-2 mb-4" style="font-size: 24px; margin-bottom: 40px">&nbsp; Ajukan Sekarang &nbsp;</a><br><br>
-              </div>     
-            </div>
           </div>
+
+          <div class="row text-center align-items-end">
+            <p style="font-size: 24px;">Hanya perlu beberapa langkah untuk mengajukan permohonan Anda</p>
+            <div class="col-4">
+
+            </div>
+
+            <div class="col-4 align-self-center">
+            <a type="button" href="#" class="btn btn-block btn-danger rounded-pill mt-2" style="font-size: 24px;">&nbsp;Ajukan Sekarang&nbsp;</a>
+            
+            </div>
+            <div class="col-4">
+              <img src="<?= base_url('assets/img/bulat.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3 img-bulat2"></a>
+            </div>
+
+          </div>
+
+             
+          </div>
+          
       </div>
     </section>
 
@@ -520,39 +538,42 @@
     <div class="container">
       <div class="row footer-atas py-4 px-2 align-items-center justify-content-center" style="background-color: #DD8505;">
         <div class="col-12 col-md-4 col-lg-2 align-self-center justify-content-end">
-        <img src="<?= base_url('assets/img/logo_diy.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8; margin-left:27px; margin-bottom: 10px;" width="120px"></a>
+        <img src="<?= base_url('assets/img/logo_diy.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8; margin-left:27px; margin-bottom: 10px;" width="100px"></a>
         </div>
-        <div class="col-12 col-md-8 col-lg-6 align-items-center justify-content-center mt-3">
-          <h4 class="font-judul" style="color: white; font-size: 22px; line-height: 24px;">DINAS KEBUDAYAAN<br> (KUNDHA KABUDAYAN) <br>DAERAH ISTIMEWA YOGYAKARTA</h4>
-          <H5 style="color: white; line-height: 10px;">Jalan Cendana II Yogyakarta 55516</H5>
-          <p style="color: white; font-size: 20px;">Telp. (0274) 562628 - Fax. (0274) 564945</p>
+        <div class="col-12 col-md-8 col-lg-6 justify-content-center mt-3">
+          <p class="font-judul" style="color: white; font-size: 20px; line-height: 24px;">DINAS KEBUDAYAAN<br> (KUNDHA KABUDAYAN) <br>DAERAH ISTIMEWA YOGYAKARTA</p>
+          <p style="color: white; line-height:20px;">Jalan Cendana II Yogyakarta 55516 <br> Telp. (0274) 562628 - Fax. (0274) 564945</p>
+          <!-- <h6 style="color: white; line-height:10px;">Telp. (0274) 562628 - Fax. (0274) 564945</h6> -->
+          <!-- <p style="color: white; font-size: 18px;">Telp. (0274) 562628 - Fax. (0274) 564945</p> -->
         </div>
 
         <div class="col-12 col-md-12 col-lg-4">
-          <div class="row g-0">
-            <div class="col-2 col-md-2 col-lg-2 offset-1">
-              <img src="<?= base_url('assets/img/twitter.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="64px"></a>
+          <div class="row g-1 pe-4">
+            <!-- <div class="col-lg-2"></div> -->
+            <div class="col-lg-3"></div>
+            <div class="col-2 col-md-2 col-lg-2">
+              <img src="<?= base_url('assets/img/twitter.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style=" width:60px"></a>
             </div>
             <div class="col-2 col-md-2 col-lg-2">
-            <img src="<?= base_url('assets/img/instagram.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="64px"></a>
+            <img src="<?= base_url('assets/img/instagram.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style=" width:60px"></a>
             </div>
             <div class="col-2 col-md-2 col-lg-2">
-            <img src="<?= base_url('assets/img/youtube.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="64px"></a>
+            <img src="<?= base_url('assets/img/youtube.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style=" width:60px"></a>
             </div>
             <div class="col-2 col-md-2 col-lg-2">
-            <img src="<?= base_url('assets/img/facebook.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" height="64px"></a>
+            <img src="<?= base_url('assets/img/facebook.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style=" height: 60px;"></a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container" style="background-color: #935801;">
-      <div class="row footer-bawah py-2 px-2 align-items-center justify-content-center g-0" style="background-color: #935801;">
-        <div class="col-lg-10 align-items-center">
-        <h4 class="text-center" style="color: white; font-size: 18px;">Copyright @2022. Dinas Kebudayaan (Kundha Kabudayan) Daerah Istimewa Yogyakarta</h4>
+    <div class="container py-2" style="background-color: #935801;">
+      <div class="row px-2 justify-content-center align-items-center" style="background-color: #935801;">
+        <div class="col-lg-10 text-center">
+          <!-- <p class="text-center" style="color: white;">Copyright @2022. Dinas Kebudayaan (Kundha Kabudayan) Daerah Istimewa Yogyakarta</p> -->
+          <div class="d-inline-flex p-2" style="color: white;">Copyright @2022. Dinas Kebudayaan (Kundha Kabudayan) Daerah Istimewa Yogyakarta</div>
         </div>
-        
       </div>
     </div>
   </section>

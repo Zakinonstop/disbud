@@ -1,8 +1,9 @@
 body {
     font-family: Assistant;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 19px;
+    /* line-height: 30px; */
     color: #5D5D5D;
+    background-color: #F8F9FA;
 }
 
 .shadow-hero {
@@ -13,6 +14,7 @@ body {
 .card-zoom-atas {
     transition: transform 0.2s ease;
     border-radius: 10px;
+    /* width: 300px; */
     /* box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18); */
     /* box-shadow: 0 3px 30px rgb(0 0 0 / 2); */
     /* height: 510px; */
@@ -63,6 +65,12 @@ body {
 #hero .hero  {
     background-size: cover;
 }
+/* 
+.card-zoom-atas .card-body {
+    flex: 1 1 auto;
+    padding: 0px;
+    color: var(--bs-card-color);
+} */
 
 .font-judul {
     font-family: ZCOOL XiaoWei;
@@ -71,19 +79,25 @@ body {
     line-height: 40px;
 }
 
+.card-zoom-atas .card-body {
+        /* flex: 1 1 auto; */
+        padding: 0 !important;
+        /* color: var(--bs-card-color); */
+}
+
 .judul-2 {
     font-family: ZCOOL XiaoWei;
     font-style: normal;
     color: #007367;
     line-height: 40px;
-    font-size: 48px;
+    font-size: 32px;
 }
 
 .sub-judul {
     font-style: normal;
     color: #007367;
     line-height: 40px;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .btn-customm {
@@ -99,8 +113,10 @@ body {
 .custom-card {
     /* padding: 1.5em .5em .5em; */
     border-radius: 20em;
-    border-color: white;
+    border-color: none;
     text-align: center;
+    flex: 1 1 auto;
+    padding: 8px !important;
    
 }
 
@@ -122,12 +138,8 @@ input.transparent-input{
 
 .footer-atas {
     padding-top: 240px;
-    margin-top: 200px;
+    /* margin-top: 200px; */
 }
-
-/* .footer-bawah {
-    height: 60px;
-} */
 
 .custom-border-1 {
     border-top: 3px;
@@ -187,6 +199,12 @@ input.transparent-input{
     color: white;
    
 }
+/* 
+img .dimana-custom {
+    width: auto; 
+    height:34px !important; 
+    margin-left:3px;
+} */
 
 /* 
 .malioboro .card-title:hover {
