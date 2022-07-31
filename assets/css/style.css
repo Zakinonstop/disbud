@@ -44,10 +44,20 @@ body {
 }
 
 .shadow-custom {
-    box-shadow: 0 3px 40px rgb(0 0 0 / 0.1);
+    box-shadow: 0 3px 14px rgb(0 0 0 / 0.1);
 }
 
 #hero .rata {
+    padding-left: 40px; 
+    padding-right: 40px;
+}
+
+#regulasi .rata {
+    padding-left: 40px; 
+    padding-right: 40px;
+}
+
+#footer .rata {
     padding-left: 40px; 
     padding-right: 40px;
 }
@@ -102,6 +112,7 @@ body {
 
 .btn-customm {
     background-color: #DD8505; 
+    /* background-color: #ac6c0b;  */
     color: white;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -109,6 +120,7 @@ body {
     margin-bottom: -10px;
     
 }
+
 
 .custom-card {
     /* padding: 1.5em .5em .5em; */
@@ -135,6 +147,12 @@ input.transparent-input{
     /* margin-bottom: -10px; */
     
 }
+
+
+.btn-utama {
+    font-size: 24px !important;
+}
+
 
 .footer-atas {
     padding-top: 240px;
